@@ -30,3 +30,22 @@ module Daisy =
         let block = Attr.className "btn-block"
         let circle = Attr.className "btn-circle"
         let square = Attr.className "btn-square"
+
+    module Card =
+        let card elements =
+            Html.div [ Attr.className "card"; yield! elements ]
+
+        let body elements =
+            Html.div [ Attr.className "card-body"; yield! elements ]
+
+        let title elements =
+            Html.h2 [ Attr.className "card-title"; yield! elements ]
+
+        let actions elements =
+            Html.div [ Attr.className "card-actions"; yield! elements ]
+
+        let bordered = Attr.className "card-bordered"
+        let imageFull = Attr.className "image-full"
+        let normal = Attr.className "card-normal"
+        let compact = Attr.className "card-compact"
+        let side = Attr.className "card-side"
