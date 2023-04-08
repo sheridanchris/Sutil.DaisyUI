@@ -172,3 +172,32 @@ module Daisy =
         let center = Attr.className "carousel-center"
         let end' = Attr.className "carousel-end"
         let vertical = Attr.className "carousel-vertical"
+
+    // TODO: should this be split into two components? OR...
+    // should there be a distinction between chat and chat-bubble.
+    module ChatBubble =
+        let chat elements =
+            Html.div [ Attr.className "chat"; yield! elements ]
+
+        let image elements =
+            Html.div [ Attr.className "chat-image"; yield! elements ]
+
+        let header elements =
+            Html.div [ Attr.className "chat-header"; yield! elements ]
+
+        let footer elements =
+            Html.div [ Attr.className "chat-footer"; yield! elements ]
+
+        let chatBubble elements =
+            Html.div [ Attr.className "chat-bubble"; yield! elements ]
+
+        let start = Attr.className "chat-start"
+        let end' = Attr.className "chat-end"
+
+        let primary = Attr.className "chat-bubble-primary"
+        let secondary = Attr.className "chat-bubble-secondary"
+        let accent = Attr.className "chat-bubble-accent"
+        let info = Attr.className "chat-bubble-info"
+        let success = Attr.className "chat-bubble-success"
+        let warning = Attr.className "chat-bubble-warning"
+        let error = Attr.className "chat-bubble-error"
