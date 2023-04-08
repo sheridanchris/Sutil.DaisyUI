@@ -69,3 +69,22 @@ module Daisy =
         let online = Attr.className "online"
         let offline = Attr.className "offline"
         let placeholder = Attr.className "placeholder"
+
+    module Badge =
+        let badge elements =
+            Html.span [ Attr.className "badge"; yield! elements ]
+        
+        let outline = Attr.className "outline"
+        let primary = Attr.className "badge-primary"
+        let secondary = Attr.className "badge-secondary"
+        let accent = Attr.className "badge-accent"
+        let ghost = Attr.className "badge-ghost"
+        let info = Attr.className "badge-info"
+        let success = Attr.className "badge-success"
+        let warning = Attr.className "badge-warning"
+        let error = Attr.className "badge-error"
+        
+        let large = Attr.className "badge-lg"
+        let medium = Attr.className "badge-md"
+        let small = Attr.className "badge-sm"
+        let extraSmall = Attr.className "badge-xs"
