@@ -237,3 +237,12 @@ module Daisy =
         let success = Attr.className "progress-success"
         let warning = Attr.className "progress-warning"
         let error = Attr.className "progress-error"
+
+    module Footer =
+        let footer elements =
+            Html.footer [ Attr.className "footer"; yield! elements ]
+
+        let title (value: string) =
+            Html.span [ Attr.className "footer-title"; Attr.value value ]
+
+        let center = Attr.className "footer-center"
