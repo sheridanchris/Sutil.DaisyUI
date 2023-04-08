@@ -161,3 +161,14 @@ module Daisy =
 
         let horizontal = Attr.className "btn-group-horizontal"
         let vertical = Attr.className "btn-group-vertical"
+
+    module Carousel =
+        let carousel elements =
+            Html.div [ Attr.className "carousel"; yield! elements ]
+
+        let carouselItem elements =
+            Html.div [ Attr.className "carousel-item"; yield! elements ]
+
+        let center = Attr.className "carousel-center"
+        let end' = Attr.className "carousel-end"
+        let vertical = Attr.className "carousel-vertical"
