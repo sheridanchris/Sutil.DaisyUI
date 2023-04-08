@@ -265,3 +265,14 @@ module Daisy =
     module Stack =
         let stack elements =
             Html.div [ Attr.className "stack"; yield! elements ]
+
+    module Toast =
+        let toast elements =
+            Html.div [ Attr.className "toast"; yield! elements ]
+
+        let start = Attr.className "toast-start"
+        let center = Attr.className "toast-center"
+        let end' = Attr.className "toast-end"
+        let top = Attr.className "toast-top"
+        let middle = Attr.className "toast-middle"
+        let bottom = Attr.className "toast-bottom"
