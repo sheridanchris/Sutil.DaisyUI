@@ -99,3 +99,23 @@ module Daisy =
         
         let normal = Attr.className "table-normal"
         let compact = Attr.className "table-compact"
+
+    module Tooltip =
+        let tooltip elements =
+            Html.div [ Attr.className "tooltip"; yield! elements ]
+        
+        let text value = Attr.custom("data-tip", value)
+        
+        let open' = Attr.className "tooltip-open"
+        let top = Attr.className "tooltip-top"
+        let bottom = Attr.className "tooltip-bottom"
+        let left = Attr.className "tooltip-left"
+        let right = Attr.className "tooltip-right"
+        
+        let primary = Attr.className "tooltip-primary"
+        let secondary = Attr.className "tooltip-secondary"
+        let accent = Attr.className "tooltip-accent"
+        let info = Attr.className "tooltip-info"
+        let success = Attr.className "tooltip-success"
+        let warning = Attr.className "tooltip-warning"
+        let error = Attr.className "tooltip-error"
