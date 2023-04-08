@@ -73,7 +73,7 @@ module Daisy =
     module Badge =
         let badge elements =
             Html.span [ Attr.className "badge"; yield! elements ]
-        
+
         let outline = Attr.className "outline"
         let primary = Attr.className "badge-primary"
         let secondary = Attr.className "badge-secondary"
@@ -83,35 +83,35 @@ module Daisy =
         let success = Attr.className "badge-success"
         let warning = Attr.className "badge-warning"
         let error = Attr.className "badge-error"
-        
+
         let large = Attr.className "badge-lg"
         let medium = Attr.className "badge-md"
         let small = Attr.className "badge-sm"
         let extraSmall = Attr.className "badge-xs"
-    
+
     module Table =
         let table elements =
             Html.table [ Attr.className "table"; yield! elements ]
-        
+
         let zebra = Attr.className "table-zebra"
         let active = Attr.className "active"
         let hover = Attr.className "hover"
-        
+
         let normal = Attr.className "table-normal"
         let compact = Attr.className "table-compact"
 
     module Tooltip =
         let tooltip elements =
             Html.div [ Attr.className "tooltip"; yield! elements ]
-        
-        let text value = Attr.custom("data-tip", value)
-        
+
+        let text value = Attr.custom ("data-tip", value)
+
         let open' = Attr.className "tooltip-open"
         let top = Attr.className "tooltip-top"
         let bottom = Attr.className "tooltip-bottom"
         let left = Attr.className "tooltip-left"
         let right = Attr.className "tooltip-right"
-        
+
         let primary = Attr.className "tooltip-primary"
         let secondary = Attr.className "tooltip-secondary"
         let accent = Attr.className "tooltip-accent"
