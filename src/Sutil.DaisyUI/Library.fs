@@ -201,3 +201,18 @@ module Daisy =
         let success = Attr.className "chat-bubble-success"
         let warning = Attr.className "chat-bubble-warning"
         let error = Attr.className "chat-bubble-error"
+
+    module Collapse =
+        let collapse elements =
+            Html.div [ Attr.className "collapse"; yield! elements ]
+
+        let title elements =
+            Html.div [ Attr.className "collapse-title"; yield! elements ]
+
+        let content elements =
+            Html.div [ Attr.className "collapse-content"; yield! elements ]
+
+        let arrow = Attr.className "collapse-arrow"
+        let plus = Attr.className "collapse-plus"
+        let open' = Attr.className "collapse-open"
+        let close = Attr.className "collapse-close"
