@@ -53,8 +53,19 @@ module Daisy =
     module Alert =
         let alert elements =
             Html.div [ Attr.className "alert"; yield! elements ]
-        
+
         let info = Attr.className "alert-info"
         let success = Attr.className "alert-success"
         let warning = Attr.className "alert-warning"
         let error = Attr.className "alert-error"
+
+    module Avatar =
+        let avatar elements =
+            Html.div [ Attr.className "avatar"; yield! elements ]
+
+        let avatarGroup elements =
+            Html.div [ Attr.className "avatar-group"; yield! elements ]
+
+        let online = Attr.className "online"
+        let offline = Attr.className "offline"
+        let placeholder = Attr.className "placeholder"
