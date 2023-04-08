@@ -49,3 +49,12 @@ module Daisy =
         let normal = Attr.className "card-normal"
         let compact = Attr.className "card-compact"
         let side = Attr.className "card-side"
+
+    module Alert =
+        let alert elements =
+            Html.div [ Attr.className "alert"; yield! elements ]
+        
+        let info = Attr.className "alert-info"
+        let success = Attr.className "alert-success"
+        let warning = Attr.className "alert-warning"
+        let error = Attr.className "alert-error"
