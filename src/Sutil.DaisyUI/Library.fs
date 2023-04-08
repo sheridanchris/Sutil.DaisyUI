@@ -88,3 +88,14 @@ module Daisy =
         let medium = Attr.className "badge-md"
         let small = Attr.className "badge-sm"
         let extraSmall = Attr.className "badge-xs"
+    
+    module Table =
+        let table elements =
+            Html.table [ Attr.className "table"; yield! elements ]
+        
+        let zebra = Attr.className "table-zebra"
+        let active = Attr.className "active"
+        let hover = Attr.className "hover"
+        
+        let normal = Attr.className "table-normal"
+        let compact = Attr.className "table-compact"
