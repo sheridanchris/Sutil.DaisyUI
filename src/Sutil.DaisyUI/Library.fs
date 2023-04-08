@@ -246,3 +246,11 @@ module Daisy =
             Html.span [ Attr.className "footer-title"; Attr.value value ]
 
         let center = Attr.className "footer-center"
+
+    module Artboard =
+        let artboard elements =
+            Html.div [ Attr.className "artboard"; yield! elements ]
+
+        let demo = Attr.className "artboard-demo"
+        let phone1 = Attr.className "phone-1"
+        let phone2 = Attr.className "phone-2"
