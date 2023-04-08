@@ -137,3 +137,20 @@ module Daisy =
         let warning = Attr.className "link-warning"
         let error = Attr.className "link-error"
         let hover = Attr.className "link-hover"
+
+    module Menu =
+        let menu elements =
+            Html.ul [ Attr.className "menu"; yield! elements ]
+
+        let title (value: string) =
+            Html.li [ Attr.className "menu-title"; Html.span value ]
+
+        let disabled = Attr.className "disabled"
+        let active = Attr.className "active"
+        let bordered = Attr.className "bordered"
+        let hoverBordered = Attr.className "hover-bordered"
+
+        let normal = Attr.className "menu-normal"
+        let compact = Attr.className "menu-compact"
+        let vertical = Attr.className "menu-vertical"
+        let horizontal = Attr.className "menu-horizontal"
