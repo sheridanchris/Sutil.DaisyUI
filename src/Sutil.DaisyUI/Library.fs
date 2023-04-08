@@ -154,3 +154,10 @@ module Daisy =
         let compact = Attr.className "menu-compact"
         let vertical = Attr.className "menu-vertical"
         let horizontal = Attr.className "menu-horizontal"
+
+    module ButtonGroup =
+        let buttonGroup elements =
+            Html.div [ Attr.className "btn-group"; yield! elements ]
+
+        let horizontal = Attr.className "btn-group-horizontal"
+        let vertical = Attr.className "btn-group-vertical"
