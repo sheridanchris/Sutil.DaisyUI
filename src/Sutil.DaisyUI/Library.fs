@@ -261,3 +261,7 @@ module Daisy =
 
         let vertical = Attr.className "divider-vertical"
         let horizontal = Attr.className "divider-horizontal"
+
+    module Stack =
+        let stack elements =
+            Html.div [ Attr.className "stack"; yield! elements ]
