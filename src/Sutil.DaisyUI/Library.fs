@@ -119,3 +119,7 @@ module Daisy =
         let success = Attr.className "tooltip-success"
         let warning = Attr.className "tooltip-warning"
         let error = Attr.className "tooltip-error"
+
+    module Breadcrumbs =
+        let breadcrumbs elements =
+            Html.div [ Attr.className "breadcrumbs"; yield! elements ]
