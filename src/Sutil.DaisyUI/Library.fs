@@ -216,3 +216,12 @@ module Daisy =
         let plus = Attr.className "collapse-plus"
         let open' = Attr.className "collapse-open"
         let close = Attr.className "collapse-close"
+
+    module Kbd =
+        let kbd elements =
+            Html.kbd [ Attr.className "kbd"; yield! elements ]
+
+        let large = Attr.className "kbd-large"
+        let medium = Attr.className "kbd-md"
+        let small = Attr.className "kbd-small"
+        let extraSmall = Attr.className "kbd-xs"
