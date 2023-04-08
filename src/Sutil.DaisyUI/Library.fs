@@ -276,3 +276,21 @@ module Daisy =
         let top = Attr.className "toast-top"
         let middle = Attr.className "toast-middle"
         let bottom = Attr.className "toast-bottom"
+
+    module Steps =
+        let steps elements =
+            Html.ul [ Attr.className "steps"; yield! elements ]
+
+        let step elements =
+            Html.li [ Attr.className "step"; yield! elements ]
+
+        let primary = Attr.className "step-primary"
+        let secondary = Attr.className "step-secondary"
+        let accent = Attr.className "step-accent"
+        let info = Attr.className "step-info"
+        let success = Attr.className "step-success"
+        let warning = Attr.className "step-warning"
+        let error = Attr.className "step-error"
+
+        let vertical = Attr.className "steps-vertical"
+        let horizontal = Attr.className "steps-horizontal"
