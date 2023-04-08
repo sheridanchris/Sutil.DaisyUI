@@ -123,3 +123,17 @@ module Daisy =
     module Breadcrumbs =
         let breadcrumbs elements =
             Html.div [ Attr.className "breadcrumbs"; yield! elements ]
+
+    module Link =
+        let link elements =
+            Html.a [ Attr.className "link"; yield! elements ]
+
+        let neutral = Attr.className "link-neutral"
+        let primary = Attr.className "link-primary"
+        let secondary = Attr.className "link-secondary"
+        let accent = Attr.className "link-accent"
+        let success = Attr.className "link-success"
+        let info = Attr.className "link-info"
+        let warning = Attr.className "link-warning"
+        let error = Attr.className "link-error"
+        let hover = Attr.className "link-hover"
