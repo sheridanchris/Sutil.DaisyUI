@@ -254,3 +254,10 @@ module Daisy =
         let demo = Attr.className "artboard-demo"
         let phone1 = Attr.className "phone-1"
         let phone2 = Attr.className "phone-2"
+
+    module Divider =
+        let divider elements =
+            Html.div [ Attr.className "divider"; yield! elements ]
+
+        let vertical = Attr.className "divider-vertical"
+        let horizontal = Attr.className "divider-horizontal"
