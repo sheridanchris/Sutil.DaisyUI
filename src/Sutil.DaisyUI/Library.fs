@@ -225,3 +225,15 @@ module Daisy =
         let medium = Attr.className "kbd-md"
         let small = Attr.className "kbd-small"
         let extraSmall = Attr.className "kbd-xs"
+
+    module Progress =
+        let progress elements =
+            Html.progress [ Attr.className "progress"; yield! elements ]
+
+        let primary = Attr.className "progress-primary"
+        let secondary = Attr.className "progress-secondary"
+        let accent = Attr.className "progress-accent"
+        let info = Attr.className "progress-info"
+        let success = Attr.className "progress-success"
+        let warning = Attr.className "progress-warning"
+        let error = Attr.className "progress-error"
