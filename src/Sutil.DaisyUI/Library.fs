@@ -342,3 +342,7 @@ module Daisy =
         let active = Attr.className "swap-active"
         let rotate = Attr.className "swap-rotate"
         let flip = Attr.className "swap-flip"
+
+    module Countdown =
+        let countdown elements =
+            Html.span [ Attr.className "countdown"; yield! elements ]
