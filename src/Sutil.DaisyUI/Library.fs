@@ -294,3 +294,16 @@ module Daisy =
 
         let vertical = Attr.className "steps-vertical"
         let horizontal = Attr.className "steps-horizontal"
+
+    module Navbar =
+        let navbar elements =
+            Html.div [ Attr.className "navbar"; yield! elements ]
+        
+        let navbarStart elements =
+            Html.div [ Attr.className "navbar-start"; yield! elements ]
+        
+        let navbarCenter elements =
+            Html.div [ Attr.className "navbar-center"; yield! elements ]
+        
+        let navbarEnd elements =
+            Html.div [ Attr.className "navbar-end"; yield! elements ]
