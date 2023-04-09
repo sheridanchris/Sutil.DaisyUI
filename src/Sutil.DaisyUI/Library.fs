@@ -325,3 +325,20 @@ module Daisy =
         let small = Attr.className "tab-sm"
         let medium = Attr.className "tab-md"
         let large = Attr.className "tab-lg"
+
+    module Swap =
+        let swap elements =
+            Html.div [ Attr.className "swap"; yield! elements ]
+        
+        let swapOnAttr = Attr.className "swap-on"
+        let swapOffAttr = Attr.className "swap-off"
+        
+        let swapOn elements =
+            Html.div [ swapOnAttr; yield! elements ]
+        
+        let swapOff elements =
+            Html.div [ swapOffAttr; yield! elements ]
+        
+        let active = Attr.className "swap-active"
+        let rotate = Attr.className "swap-rotate"
+        let flip = Attr.className "swap-flip"
