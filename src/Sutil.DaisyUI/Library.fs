@@ -350,3 +350,28 @@ module Daisy =
     module RadialProgress =
         let radialProgress elements =
             Html.div [ Attr.className "radial-progress"; yield! elements ]
+
+    module Stat =
+        let stats elements =
+            Html.div [ Attr.className "stats"; yield! elements ]
+        
+        let stat elements =
+            Html.div [ Attr.className "stat"; yield! elements ]
+        
+        let title elements =
+            Html.div [ Attr.className "stat-title"; yield! elements ]
+        
+        let value elements =
+            Html.div [ Attr.className "stat-value"; yield! elements ]
+        
+        let desc elements =
+            Html.div [ Attr.className "state-desc"; yield! elements ]
+        
+        let figure elements =
+            Html.div [ Attr.className "stat-figure"; yield! elements ]
+        
+        let actions elements =
+            Html.div [ Attr.className "stat-actions"; yield! elements ]
+        
+        let horizontal = Attr.className "stat-horizontal"
+        let vertical = Attr.className "stat-vertical"
