@@ -375,3 +375,24 @@ module Daisy =
         
         let horizontal = Attr.className "stat-horizontal"
         let vertical = Attr.className "stat-vertical"
+
+    module Checkbox =
+        let checkbox elements =
+            Html.input
+                [ Attr.typeCheckbox
+                  Attr.className "checkbox"
+                  yield! elements ]
+        
+        let primary = Attr.className "checkbox-primary"
+        let secondary = Attr.className "checkbox-secondary"
+        let accent = Attr.className "checkbox-accent"
+        let success = Attr.className "checkbox-success"
+        let warning = Attr.className "checkbox-warning"
+        let info = Attr.className "checkbox-info"
+        let error = Attr.className "checkbox-error"
+        
+        let large = Attr.className "checkbox-lg"
+        let medium = Attr.className "checkbox-md"
+        let small = Attr.className "checkbox-sm"
+        let extraSmall = Attr.className "checkbox-sm"
+        
