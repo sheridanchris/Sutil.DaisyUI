@@ -396,3 +396,6 @@ module Daisy =
         let small = Attr.className "checkbox-sm"
         let extraSmall = Attr.className "checkbox-sm"
         
+    module FormControl =
+        let formControl elements =
+            Html.div [ Attr.className "form-control"; yield! elements ]
