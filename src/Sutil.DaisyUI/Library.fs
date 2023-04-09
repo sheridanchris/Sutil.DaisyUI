@@ -307,3 +307,21 @@ module Daisy =
         
         let navbarEnd elements =
             Html.div [ Attr.className "navbar-end"; yield! elements ]
+
+    module Tabs =
+        let tabs elements =
+            Html.div [ Attr.className "tabs"; yield! elements ]
+        
+        let tab elements =
+            Html.a [ Attr.className "tab"; yield! elements ]
+        
+        let boxed = Attr.className "tabs-boxed"
+        let active = Attr.className "tab-active"
+        let disabled = Attr.className "tab-disabled"
+        let bordered = Attr.className "tab-bordered"
+        let lifted = Attr.className "tab-lifted"
+        
+        let extraSmall = Attr.className "tab-xs"
+        let small = Attr.className "tab-sm"
+        let medium = Attr.className "tab-md"
+        let large = Attr.className "tab-lg"
