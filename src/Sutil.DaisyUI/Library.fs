@@ -346,3 +346,7 @@ module Daisy =
     module Countdown =
         let countdown elements =
             Html.span [ Attr.className "countdown"; yield! elements ]
+    
+    module RadialProgress =
+        let radialProgress elements =
+            Html.div [ Attr.className "radial-progress"; yield! elements ]
