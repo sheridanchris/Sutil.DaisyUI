@@ -635,3 +635,22 @@ module Daisy =
         let top = Attr.className "indicator-top"
         let middle = Attr.className "indicator-middle"
         let bottom = Attr.className "indicator-bottom"
+    
+    module Drawer =
+        let drawer elements =
+            Html.div [ Attr.className "drawer"; yield! elements ]
+        
+        let toggle elements =
+            Html.input [ Attr.typeCheckbox; Attr.className "drawer-toggle"; yield! elements ]
+        
+        let content elements =
+            Html.div [ Attr.className "drawer-contents"; yield! elements ]
+        
+        let side elements =
+            Html.div [ Attr.className "drawer-side"; yield! elements ]
+            
+        let overlay elements =
+            Html.label [ Attr.className "drawer-overlay"; yield! elements ]
+        
+        let mobile = Attr.className "drawer-mobile"
+        let end' = Attr.className "drawer-end"
