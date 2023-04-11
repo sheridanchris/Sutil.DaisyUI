@@ -610,3 +610,14 @@ module Daisy =
         let small = Attr.className "btm-nav-sm"
         let medium = Attr.className "btm-nav-md"
         let large = Attr.className "btm-nav-lg"
+    
+    module InputGroup =
+        let inputGroup elements =
+            Html.label [ Attr.className "input-group"; yield! elements ]
+        
+        let large = Attr.className "input-group-lg"
+        let medium = Attr.className "input-group-md"
+        let small = Attr.className "input-group-sm"
+        let extraSmall = Attr.className "input-group-xs"
+        
+        let vertical = Attr.className "input-group-vertical"
