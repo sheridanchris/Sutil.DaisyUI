@@ -591,3 +591,6 @@ module Daisy =
         let code elements =
             Html.div [ Attr.className "mockup-code"; yield! elements ]        
     
+    module Phone =
+        let phone elements =
+            Html.div [ Attr.className "mockup-phone"; yield! elements ]        
