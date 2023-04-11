@@ -399,3 +399,13 @@ module Daisy =
     module FormControl =
         let formControl elements =
             Html.div [ Attr.className "form-control"; yield! elements ]
+    
+    module Label =
+        let label elements =
+            Html.label [ Attr.className "label"; yield! elements ]
+            
+        let labelTextAttr = Attr.className "label-text"
+        let labelTextAltAttr = Attr.className "label-text-alt"
+        
+        let labelText (value: string) = Html.span [ labelTextAttr; Attr.text value ]
+        let labelTextAlt (value: string) = Html.span [ labelTextAltAttr; Attr.text value ]
