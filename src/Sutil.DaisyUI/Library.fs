@@ -673,3 +673,20 @@ module Daisy =
         let open' = Attr.className "modal-open"
         let bottom = Attr.className "modal-bottom"
         let middle = Attr.className "modal-middle"
+    
+    module Dropdown =
+        let dropdown elements =
+            Html.div [ Attr.className "dropdown"; yield! elements ]
+        
+        let contentAttr = Attr.className "dropdown-content"
+        
+        let content elements =
+            Html.div [ contentAttr; yield! elements ]
+        
+        let end' = Attr.className "dropdown-end"
+        let top = Attr.className "dropdown-top"
+        let bottom = Attr.className "dropdown-bottom"
+        let left = Attr.className "dropdown-left"
+        let right = Attr.className "dropdown-right"
+        let hover = Attr.className "dropdown-hover"
+        let open' = Attr.className "dropdown-open"
