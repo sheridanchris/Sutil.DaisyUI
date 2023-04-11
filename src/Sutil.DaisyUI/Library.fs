@@ -409,3 +409,22 @@ module Daisy =
         
         let labelText (value: string) = Html.span [ labelTextAttr; Attr.text value ]
         let labelTextAlt (value: string) = Html.span [ labelTextAltAttr; Attr.text value ]
+        
+    module Input =
+        let input elements =
+            Html.input [ Attr.typeText; Attr.className "input"; yield! elements ]
+        
+        let bordered = Attr.className "input-bordered"
+        let ghost = Attr.className "input-ghost"
+        let primary = Attr.className "input-primary"
+        let secondary = Attr.className "input-secondary"
+        let accent = Attr.className "input-accent"
+        let info = Attr.className "input-info"
+        let success = Attr.className "input-success"
+        let warning = Attr.className "input-warning"
+        let error = Attr.className "input-error"
+        
+        let large = Attr.className "input-lg"
+        let medium = Attr.className "input-md"
+        let small = Attr.className "input-sm"
+        let extraSmall = Attr.className "input-xs"
