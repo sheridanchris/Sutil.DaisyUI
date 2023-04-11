@@ -5,54 +5,53 @@ open System.IO
 open System
 
 let nugetPushCommand (apiKey: string) : System.FormattableString =
-  $"dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json --skip-duplicate -k {apiKey}"
+    $"dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json --skip-duplicate -k {apiKey}"
 
 
 pipeline "Build" {
-  description "Build Sutil.DaisyUI"
+    description "Build Sutil.DaisyUI"
 
-  stage "Restore" {
-    run "dotnet tool restore"
-    run "dotnet restore"
-  }
+    stage "Restore" {
+        run "dotnet tool restore"
+        run "dotnet restore"
+    }
 
-  stage "Build" { run "dotnet build" }
-  stage "Check formatting" { run "dotnet fantomas --recurse --check ./" }
-  stage "Test" { run "dotnet test" }
-  runIfOnlySpecified false
+    stage "Build" { run "dotnet build" }
+    stage "Check formatting" { run "dotnet fantomas --recurse --check ./" }
+    stage "Test" { run "dotnet test" }
+    runIfOnlySpecified false
 }
 
 pipeline "Publish" {
-  description "Publish Sutil.DaisyUI to NuGet"
+    description "Publish Sutil.DaisyUI to NuGet"
 
-  whenAll {
-    branch "main"
+    whenAll {
+        branch "main"
 
-    whenAny {
-      envVar "NUGET_API_KEY"
-      cmdArg "NUGET_API_KEY"
+        whenAny {
+            envVar "NUGET_API_KEY"
+            cmdArg "NUGET_API_KEY"
+        }
     }
-  }
 
-  stage "Pack" { run "dotnet pack -c Release ./src/Sutil.DaisyUI -o ." }
+    stage "Pack" { run "dotnet pack -c Release ./src/Sutil.DaisyUI -o ." }
 
-  stage "Publish" {
-    run (fun ctx ->
-      let key = ctx.GetCmdArgOrEnvVar "NUGET_API_KEY"
-      runSensitive (nugetPushCommand key))
-  }
-
-  post [
-    stage "Post publish" {
-      whenNot { envVar "GITHUB_ACTION" }
-
-      run (fun _ ->
-        let nugetPackageFiles =
-          Directory.EnumerateFiles(Environment.CurrentDirectory, "*.nupkg")
-
-        nugetPackageFiles |> Seq.iter File.Delete)
+    stage "Publish" {
+        run (fun ctx ->
+            let key = ctx.GetCmdArgOrEnvVar "NUGET_API_KEY"
+            runSensitive (nugetPushCommand key))
     }
-  ]
 
-  runIfOnlySpecified true
+    post
+        [ stage "Post publish" {
+              whenNot { envVar "GITHUB_ACTION" }
+
+              run (fun _ ->
+                  let nugetPackageFiles =
+                      Directory.EnumerateFiles(Environment.CurrentDirectory, "*.nupkg")
+
+                  nugetPackageFiles |> Seq.iter File.Delete)
+          } ]
+
+    runIfOnlySpecified true
 }
