@@ -586,3 +586,8 @@ module Daisy =
         let triangle4 = Attr.className "mask-triangle-4"
         let half1 = Attr.className "mask-half-1"
         let half2 = Attr.className "mask-half-2"
+
+    module Code =
+        let code elements =
+            Html.div [ Attr.className "mockup-code"; yield! elements ]        
+    
