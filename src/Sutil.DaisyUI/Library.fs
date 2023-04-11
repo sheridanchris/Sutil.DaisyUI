@@ -481,3 +481,15 @@ module Daisy =
         let medium = Attr.className "file-input-md"
         let small = Attr.className "file-input-sm"
         let extraSmall = Attr.className "file-input-xs"
+    
+    module Rating =
+        let rating elements =
+            Html.div [ Attr.className "rating"; yield! elements ]
+        
+        let half = Attr.className "rating-half"
+        let hidden = Attr.className "rating-hidden"
+        
+        let large = Attr.className "rating-lg"
+        let medium = Attr.className "rating-medium"
+        let small = Attr.className "rating-sm"
+        let extraSmall = Attr.className "rating-xs"
