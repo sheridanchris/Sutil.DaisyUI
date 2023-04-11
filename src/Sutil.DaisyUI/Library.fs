@@ -4,8 +4,10 @@ open Sutil
 
 module Daisy =
     module Button =
+        let buttonAttr = Attr.className "btn"
+        
         let button elements =
-            Html.button [ Attr.className "btn"; yield! elements ]
+            Html.button [ buttonAttr; yield! elements ]
 
         let primary = Attr.className "btn-primary"
         let secondary = Attr.className "btn-secondary"
