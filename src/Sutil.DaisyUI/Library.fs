@@ -512,3 +512,22 @@ module Daisy =
         let medium = Attr.className "select-md"
         let small = Attr.className "select-sm"
         let extraSmall = Attr.className "select-xs"
+    
+    module TextArea =
+        let textArea elements =
+            Html.textarea [ Attr.className "textarea"; yield! elements ]
+        
+        let bordered = Attr.className "textarea-bordered"
+        let ghost = Attr.className "textarea-ghost"
+        let primary = Attr.className "textarea-primary"
+        let secondary = Attr.className "textarea-secondary"
+        let accent = Attr.className "textarea-accent"
+        let info = Attr.className "textarea-info"
+        let success = Attr.className "textarea-success"
+        let warning = Attr.className "textarea-warning"
+        let error = Attr.className "textarea-error"
+        
+        let large = Attr.className "textarea-lg"
+        let medium = Attr.className "textarea-md"
+        let small = Attr.className "textarea-sm"
+        let extraSmall = Attr.className "textarea-xs"
