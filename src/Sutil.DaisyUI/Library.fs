@@ -621,3 +621,17 @@ module Daisy =
         let extraSmall = Attr.className "input-group-xs"
         
         let vertical = Attr.className "input-group-vertical"
+    
+    module Indicator =
+        let indicator elements =
+            Html.div [ Attr.className "indicator"; yield! elements ]
+        
+        let item elements =
+            Html.span [ Attr.className "indicator-item"; yield! elements ]
+        
+        let start = Attr.className "indicator-start"
+        let center = Attr.className "indicator-center"
+        let end' = Attr.className "indicator-end"
+        let top = Attr.className "indicator-top"
+        let middle = Attr.className "indicator-middle"
+        let bottom = Attr.className "indicator-bottom"
