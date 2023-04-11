@@ -5,7 +5,7 @@ open Sutil
 module Daisy =
     module Button =
         let buttonAttr = Attr.className "btn"
-        
+
         let button elements =
             Html.button [ buttonAttr; yield! elements ]
 
@@ -300,29 +300,29 @@ module Daisy =
     module Navbar =
         let navbar elements =
             Html.div [ Attr.className "navbar"; yield! elements ]
-        
+
         let navbarStart elements =
             Html.div [ Attr.className "navbar-start"; yield! elements ]
-        
+
         let navbarCenter elements =
             Html.div [ Attr.className "navbar-center"; yield! elements ]
-        
+
         let navbarEnd elements =
             Html.div [ Attr.className "navbar-end"; yield! elements ]
 
     module Tabs =
         let tabs elements =
             Html.div [ Attr.className "tabs"; yield! elements ]
-        
+
         let tab elements =
             Html.a [ Attr.className "tab"; yield! elements ]
-        
+
         let boxed = Attr.className "tabs-boxed"
         let active = Attr.className "tab-active"
         let disabled = Attr.className "tab-disabled"
         let bordered = Attr.className "tab-bordered"
         let lifted = Attr.className "tab-lifted"
-        
+
         let extraSmall = Attr.className "tab-xs"
         let small = Attr.className "tab-sm"
         let medium = Attr.className "tab-md"
@@ -331,16 +331,16 @@ module Daisy =
     module Swap =
         let swap elements =
             Html.div [ Attr.className "swap"; yield! elements ]
-        
+
         let swapOnAttr = Attr.className "swap-on"
         let swapOffAttr = Attr.className "swap-off"
-        
+
         let swapOn elements =
             Html.div [ swapOnAttr; yield! elements ]
-        
+
         let swapOff elements =
             Html.div [ swapOffAttr; yield! elements ]
-        
+
         let active = Attr.className "swap-active"
         let rotate = Attr.className "swap-rotate"
         let flip = Attr.className "swap-flip"
@@ -348,7 +348,7 @@ module Daisy =
     module Countdown =
         let countdown elements =
             Html.span [ Attr.className "countdown"; yield! elements ]
-    
+
     module RadialProgress =
         let radialProgress elements =
             Html.div [ Attr.className "radial-progress"; yield! elements ]
@@ -356,35 +356,32 @@ module Daisy =
     module Stat =
         let stats elements =
             Html.div [ Attr.className "stats"; yield! elements ]
-        
+
         let stat elements =
             Html.div [ Attr.className "stat"; yield! elements ]
-        
+
         let title elements =
             Html.div [ Attr.className "stat-title"; yield! elements ]
-        
+
         let value elements =
             Html.div [ Attr.className "stat-value"; yield! elements ]
-        
+
         let desc elements =
             Html.div [ Attr.className "state-desc"; yield! elements ]
-        
+
         let figure elements =
             Html.div [ Attr.className "stat-figure"; yield! elements ]
-        
+
         let actions elements =
             Html.div [ Attr.className "stat-actions"; yield! elements ]
-        
+
         let horizontal = Attr.className "stat-horizontal"
         let vertical = Attr.className "stat-vertical"
 
     module Checkbox =
         let checkbox elements =
-            Html.input
-                [ Attr.typeCheckbox
-                  Attr.className "checkbox"
-                  yield! elements ]
-        
+            Html.input [ Attr.typeCheckbox; Attr.className "checkbox"; yield! elements ]
+
         let primary = Attr.className "checkbox-primary"
         let secondary = Attr.className "checkbox-secondary"
         let accent = Attr.className "checkbox-accent"
@@ -392,30 +389,33 @@ module Daisy =
         let warning = Attr.className "checkbox-warning"
         let info = Attr.className "checkbox-info"
         let error = Attr.className "checkbox-error"
-        
+
         let large = Attr.className "checkbox-lg"
         let medium = Attr.className "checkbox-md"
         let small = Attr.className "checkbox-sm"
         let extraSmall = Attr.className "checkbox-sm"
-        
+
     module FormControl =
         let formControl elements =
             Html.div [ Attr.className "form-control"; yield! elements ]
-    
+
     module Label =
         let label elements =
             Html.label [ Attr.className "label"; yield! elements ]
-            
+
         let labelTextAttr = Attr.className "label-text"
         let labelTextAltAttr = Attr.className "label-text-alt"
-        
-        let labelText (value: string) = Html.span [ labelTextAttr; Attr.text value ]
-        let labelTextAlt (value: string) = Html.span [ labelTextAltAttr; Attr.text value ]
-        
+
+        let labelText (value: string) =
+            Html.span [ labelTextAttr; Attr.text value ]
+
+        let labelTextAlt (value: string) =
+            Html.span [ labelTextAltAttr; Attr.text value ]
+
     module Input =
         let input elements =
             Html.input [ Attr.typeText; Attr.className "input"; yield! elements ]
-        
+
         let bordered = Attr.className "input-bordered"
         let ghost = Attr.className "input-ghost"
         let primary = Attr.className "input-primary"
@@ -425,16 +425,16 @@ module Daisy =
         let success = Attr.className "input-success"
         let warning = Attr.className "input-warning"
         let error = Attr.className "input-error"
-        
+
         let large = Attr.className "input-lg"
         let medium = Attr.className "input-md"
         let small = Attr.className "input-sm"
         let extraSmall = Attr.className "input-xs"
-        
+
     module Radio =
         let radio elements =
             Html.input [ Attr.typeRadio; Attr.className "radio"; yield! elements ]
-        
+
         let primary = Attr.className "radio-primary"
         let secondary = Attr.className "radio-secondary"
         let accent = Attr.className "radio-accent"
@@ -442,16 +442,16 @@ module Daisy =
         let warning = Attr.className "radio-warning"
         let info = Attr.className "radio-info"
         let error = Attr.className "radio-error"
-        
+
         let large = Attr.className "radio-lg"
         let medium = Attr.className "radio-md"
         let small = Attr.className "radio-sm"
         let extraSmall = Attr.className "radio-xs"
-    
+
     module Range =
         let range elements =
             Html.input [ Attr.typeRange; Attr.className "range"; yield! elements ]
-        
+
         let primary = Attr.className "range-primary"
         let secondary = Attr.className "range-secondary"
         let accent = Attr.className "range-accent"
@@ -459,16 +459,16 @@ module Daisy =
         let warning = Attr.className "range-warning"
         let info = Attr.className "range-info"
         let error = Attr.className "range-error"
-        
+
         let large = Attr.className "range-lg"
         let medium = Attr.className "range-md"
         let small = Attr.className "range-sm"
         let extraSmall = Attr.className "range-xs"
-    
+
     module FileInput =
         let fileInput elements =
             Html.input [ Attr.typeFile; Attr.className "file-input"; yield! elements ]
-        
+
         let bordered = Attr.className "file-input-bordered"
         let ghost = Attr.className "file-input-ghost"
         let primary = Attr.className "file-input-primary"
@@ -478,19 +478,19 @@ module Daisy =
         let success = Attr.className "file-input-success"
         let warning = Attr.className "file-input-warning"
         let error = Attr.className "file-input-error"
-        
+
         let large = Attr.className "file-input-lg"
         let medium = Attr.className "file-input-md"
         let small = Attr.className "file-input-sm"
         let extraSmall = Attr.className "file-input-xs"
-    
+
     module Rating =
         let rating elements =
             Html.div [ Attr.className "rating"; yield! elements ]
-        
+
         let half = Attr.className "rating-half"
         let hidden = Attr.className "rating-hidden"
-        
+
         let large = Attr.className "rating-lg"
         let medium = Attr.className "rating-medium"
         let small = Attr.className "rating-sm"
@@ -499,7 +499,7 @@ module Daisy =
     module Select =
         let select elements =
             Html.select [ Attr.className "select"; yield! elements ]
-        
+
         let bordered = Attr.className "select-bordered"
         let ghost = Attr.className "select-ghost"
         let primary = Attr.className "select-primary"
@@ -509,16 +509,16 @@ module Daisy =
         let success = Attr.className "select-success"
         let warning = Attr.className "select-warning"
         let error = Attr.className "select-error"
-        
+
         let large = Attr.className "select-lg"
         let medium = Attr.className "select-md"
         let small = Attr.className "select-sm"
         let extraSmall = Attr.className "select-xs"
-    
+
     module TextArea =
         let textArea elements =
             Html.textarea [ Attr.className "textarea"; yield! elements ]
-        
+
         let bordered = Attr.className "textarea-bordered"
         let ghost = Attr.className "textarea-ghost"
         let primary = Attr.className "textarea-primary"
@@ -528,16 +528,16 @@ module Daisy =
         let success = Attr.className "textarea-success"
         let warning = Attr.className "textarea-warning"
         let error = Attr.className "textarea-error"
-        
+
         let large = Attr.className "textarea-lg"
         let medium = Attr.className "textarea-md"
         let small = Attr.className "textarea-sm"
         let extraSmall = Attr.className "textarea-xs"
-        
+
     module Toggle =
         let toggle elements =
             Html.input [ Attr.typeCheckbox; Attr.className "toggle" ]
-        
+
         let primary = Attr.className "toggle-primary"
         let secondary = Attr.className "toggle-secondary"
         let accent = Attr.className "toggle-accent"
@@ -545,28 +545,27 @@ module Daisy =
         let warning = Attr.className "toggle-warning"
         let info = Attr.className "toggle-info"
         let error = Attr.className "toggle-error"
-        
+
         let large = Attr.className "toggle-lg"
         let medium = Attr.className "toggle-md"
         let small = Attr.className "toggle-sm"
         let extraSmall = Attr.className "toggle-xs"
-    
+
     module Hero =
         let hero elements =
             Html.div [ Attr.className "hero"; yield! elements ]
-        
+
         let content elements =
             Html.div [ Attr.className "hero-content"; yield! elements ]
-        
+
         let overlay elements =
             Html.div [ Attr.className "hero-overlay"; yield! elements ]
-    
+
     module Mask =
         let maskAttr = Attr.className "mask"
 
-        let mask elements =
-            Html.img [ maskAttr; yield! elements ]
-        
+        let mask elements = Html.img [ maskAttr; yield! elements ]
+
         let squircle = Attr.className "mask-squircle"
         let heart = Attr.className "mask-heart"
         let hexagon = Attr.className "mask-hexagon"
@@ -591,98 +590,98 @@ module Daisy =
 
     module Code =
         let code elements =
-            Html.div [ Attr.className "mockup-code"; yield! elements ]        
-    
+            Html.div [ Attr.className "mockup-code"; yield! elements ]
+
     module Phone =
         let phone elements =
-            Html.div [ Attr.className "mockup-phone"; yield! elements ]        
+            Html.div [ Attr.className "mockup-phone"; yield! elements ]
 
     module Window =
         let window elements =
             Html.div [ Attr.className "mockup-window"; yield! elements ]
-    
+
     module BottomNav =
         let bottomNav elements =
             Html.div [ Attr.className "btm-nav"; yield! elements ]
-            
+
         let active = Attr.className "active"
         let disabled = Attr.className "disabled"
-        
+
         let extraSmall = Attr.className "btm-nav-xs"
         let small = Attr.className "btm-nav-sm"
         let medium = Attr.className "btm-nav-md"
         let large = Attr.className "btm-nav-lg"
-    
+
     module InputGroup =
         let inputGroup elements =
             Html.label [ Attr.className "input-group"; yield! elements ]
-        
+
         let large = Attr.className "input-group-lg"
         let medium = Attr.className "input-group-md"
         let small = Attr.className "input-group-sm"
         let extraSmall = Attr.className "input-group-xs"
-        
+
         let vertical = Attr.className "input-group-vertical"
-    
+
     module Indicator =
         let indicator elements =
             Html.div [ Attr.className "indicator"; yield! elements ]
-        
+
         let item elements =
             Html.span [ Attr.className "indicator-item"; yield! elements ]
-        
+
         let start = Attr.className "indicator-start"
         let center = Attr.className "indicator-center"
         let end' = Attr.className "indicator-end"
         let top = Attr.className "indicator-top"
         let middle = Attr.className "indicator-middle"
         let bottom = Attr.className "indicator-bottom"
-    
+
     module Drawer =
         let drawer elements =
             Html.div [ Attr.className "drawer"; yield! elements ]
-        
+
         let toggle elements =
             Html.input [ Attr.typeCheckbox; Attr.className "drawer-toggle"; yield! elements ]
-        
+
         let content elements =
             Html.div [ Attr.className "drawer-contents"; yield! elements ]
-        
+
         let side elements =
             Html.div [ Attr.className "drawer-side"; yield! elements ]
-            
+
         let overlay elements =
             Html.label [ Attr.className "drawer-overlay"; yield! elements ]
-        
+
         let mobile = Attr.className "drawer-mobile"
         let end' = Attr.className "drawer-end"
-    
+
     module Modal =
         let modal elements =
             Html.div [ Attr.className "modal"; yield! elements ]
-            
+
         let box elements =
             Html.div [ Attr.className "modal-box"; yield! elements ]
-        
+
         let action elements =
             Html.div [ Attr.className "modal-action"; yield! elements ]
-    
+
         let toggle elements =
             Html.input [ Attr.typeCheckbox; Attr.className "modal-toggle"; yield! elements ]
-        
+
         let open' = Attr.className "modal-open"
         let bottom = Attr.className "modal-bottom"
         let middle = Attr.className "modal-middle"
-    
+
     module Dropdown =
         let dropdown elements =
             Html.div [ Attr.className "dropdown"; yield! elements ]
-        
+
         let contentAttr = Attr.className "dropdown-content"
-        
+
         let content elements =
             Html.div [ contentAttr; yield! elements ]
-        
+
         let end' = Attr.className "dropdown-end"
         let top = Attr.className "dropdown-top"
         let bottom = Attr.className "dropdown-bottom"
