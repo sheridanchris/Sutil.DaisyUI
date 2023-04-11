@@ -597,4 +597,16 @@ module Daisy =
 
     module Window =
         let window elements =
-            Html.div [ Attr.className "mockup-window"; yield! elements ]    
+            Html.div [ Attr.className "mockup-window"; yield! elements ]
+    
+    module BottomNav =
+        let bottomNav elements =
+            Html.div [ Attr.className "btm-nav"; yield! elements ]
+            
+        let active = Attr.className "active"
+        let disabled = Attr.className "disabled"
+        
+        let extraSmall = Attr.className "btm-nav-xs"
+        let small = Attr.className "btm-nav-sm"
+        let medium = Attr.className "btm-nav-md"
+        let large = Attr.className "btm-nav-lg"
