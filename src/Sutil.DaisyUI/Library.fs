@@ -493,3 +493,22 @@ module Daisy =
         let medium = Attr.className "rating-medium"
         let small = Attr.className "rating-sm"
         let extraSmall = Attr.className "rating-xs"
+
+    module Select =
+        let select elements =
+            Html.select [ Attr.className "select"; yield! elements ]
+        
+        let bordered = Attr.className "select-bordered"
+        let ghost = Attr.className "select-ghost"
+        let primary = Attr.className "select-primary"
+        let secondary = Attr.className "select-secondary"
+        let accent = Attr.className "select-accent"
+        let info = Attr.className "select-info"
+        let success = Attr.className "select-success"
+        let warning = Attr.className "select-warning"
+        let error = Attr.className "select-error"
+        
+        let large = Attr.className "select-lg"
+        let medium = Attr.className "select-md"
+        let small = Attr.className "select-sm"
+        let extraSmall = Attr.className "select-xs"
