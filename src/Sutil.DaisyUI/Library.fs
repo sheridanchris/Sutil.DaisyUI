@@ -462,3 +462,22 @@ module Daisy =
         let medium = Attr.className "range-md"
         let small = Attr.className "range-sm"
         let extraSmall = Attr.className "range-xs"
+    
+    module FileInput =
+        let fileInput elements =
+            Html.input [ Attr.typeFile; Attr.className "file-input"; yield! elements ]
+        
+        let bordered = Attr.className "file-input-bordered"
+        let ghost = Attr.className "file-input-ghost"
+        let primary = Attr.className "file-input-primary"
+        let secondary = Attr.className "file-input-secondary"
+        let accent = Attr.className "file-input-accent"
+        let info = Attr.className "file-input-info"
+        let success = Attr.className "file-input-success"
+        let warning = Attr.className "file-input-warning"
+        let error = Attr.className "file-input-error"
+        
+        let large = Attr.className "file-input-lg"
+        let medium = Attr.className "file-input-md"
+        let small = Attr.className "file-input-sm"
+        let extraSmall = Attr.className "file-input-xs"
