@@ -428,3 +428,20 @@ module Daisy =
         let medium = Attr.className "input-md"
         let small = Attr.className "input-sm"
         let extraSmall = Attr.className "input-xs"
+        
+    module Radio =
+        let radio elements =
+            Html.input [ Attr.typeRadio; Attr.className "radio"; yield! elements ]
+        
+        let primary = Attr.className "radio-primary"
+        let secondary = Attr.className "radio-secondary"
+        let accent = Attr.className "radio-accent"
+        let success = Attr.className "radio-success"
+        let warning = Attr.className "radio-warning"
+        let info = Attr.className "radio-info"
+        let error = Attr.className "radio-error"
+        
+        let large = Attr.className "radio-lg"
+        let medium = Attr.className "radio-md"
+        let small = Attr.className "radio-sm"
+        let extraSmall = Attr.className "radio-xs"
