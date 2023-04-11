@@ -656,3 +656,20 @@ module Daisy =
         
         let mobile = Attr.className "drawer-mobile"
         let end' = Attr.className "drawer-end"
+    
+    module Modal =
+        let modal elements =
+            Html.div [ Attr.className "modal"; yield! elements ]
+            
+        let box elements =
+            Html.div [ Attr.className "modal-box"; yield! elements ]
+        
+        let action elements =
+            Html.div [ Attr.className "modal-action"; yield! elements ]
+    
+        let toggle elements =
+            Html.input [ Attr.typeCheckbox; Attr.className "modal-toggle"; yield! elements ]
+        
+        let open' = Attr.className "modal-open"
+        let bottom = Attr.className "modal-bottom"
+        let middle = Attr.className "modal-middle"
