@@ -558,3 +558,31 @@ module Daisy =
         
         let overlay elements =
             Html.div [ Attr.className "hero-overlay"; yield! elements ]
+    
+    module Mask =
+        let maskAttr = Attr.className "mask"
+
+        let mask elements =
+            Html.img [ maskAttr; yield! elements ]
+        
+        let squircle = Attr.className "mask-squircle"
+        let heart = Attr.className "mask-heart"
+        let hexagon = Attr.className "mask-hexagon"
+        let hexagon2 = Attr.className "mask-hexagon-2"
+        let decagon = Attr.className "mask-decagon"
+        let pentagon = Attr.className "mask-pentagon"
+        let diamond = Attr.className "mask-diamond"
+        let square = Attr.className "mask-square"
+        let circle = Attr.className "mask-circle"
+        let parallelogram = Attr.className "mask-parallelogram"
+        let parallelogram2 = Attr.className "mask-parallelogram-2"
+        let parallelogram3 = Attr.className "mask-parallelogram-3"
+        let parallelogram4 = Attr.className "mask-parallelogram-4"
+        let star = Attr.className "mask-star"
+        let star2 = Attr.className "mask-star-2"
+        let triangle = Attr.className "mask-triangle"
+        let triangle2 = Attr.className "mask-triangle-2"
+        let triangle3 = Attr.className "mask-triangle-3"
+        let triangle4 = Attr.className "mask-triangle-4"
+        let half1 = Attr.className "mask-half-1"
+        let half2 = Attr.className "mask-half-2"
