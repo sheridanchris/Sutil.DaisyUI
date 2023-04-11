@@ -547,4 +547,14 @@ module Daisy =
         let large = Attr.className "toggle-lg"
         let medium = Attr.className "toggle-md"
         let small = Attr.className "toggle-sm"
-        let extraSmall = Attr.className "toggle-xs" 
+        let extraSmall = Attr.className "toggle-xs"
+    
+    module Hero =
+        let hero elements =
+            Html.div [ Attr.className "hero"; yield! elements ]
+        
+        let content elements =
+            Html.div [ Attr.className "hero-content"; yield! elements ]
+        
+        let overlay elements =
+            Html.div [ Attr.className "hero-overlay"; yield! elements ]
