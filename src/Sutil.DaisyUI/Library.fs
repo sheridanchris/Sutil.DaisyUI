@@ -445,3 +445,20 @@ module Daisy =
         let medium = Attr.className "radio-md"
         let small = Attr.className "radio-sm"
         let extraSmall = Attr.className "radio-xs"
+    
+    module Range =
+        let range elements =
+            Html.input [ Attr.typeRange; Attr.className "range"; yield! elements ]
+        
+        let primary = Attr.className "range-primary"
+        let secondary = Attr.className "range-secondary"
+        let accent = Attr.className "range-accent"
+        let success = Attr.className "range-success"
+        let warning = Attr.className "range-warning"
+        let info = Attr.className "range-info"
+        let error = Attr.className "range-error"
+        
+        let large = Attr.className "range-lg"
+        let medium = Attr.className "range-md"
+        let small = Attr.className "range-sm"
+        let extraSmall = Attr.className "range-xs"
