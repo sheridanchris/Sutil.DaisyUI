@@ -531,3 +531,20 @@ module Daisy =
         let medium = Attr.className "textarea-md"
         let small = Attr.className "textarea-sm"
         let extraSmall = Attr.className "textarea-xs"
+        
+    module Toggle =
+        let toggle elements =
+            Html.input [ Attr.typeCheckbox; Attr.className "toggle" ]
+        
+        let primary = Attr.className "toggle-primary"
+        let secondary = Attr.className "toggle-secondary"
+        let accent = Attr.className "toggle-accent"
+        let success = Attr.className "toggle-success"
+        let warning = Attr.className "toggle-warning"
+        let info = Attr.className "toggle-info"
+        let error = Attr.className "toggle-error"
+        
+        let large = Attr.className "toggle-lg"
+        let medium = Attr.className "toggle-md"
+        let small = Attr.className "toggle-sm"
+        let extraSmall = Attr.className "toggle-xs" 
