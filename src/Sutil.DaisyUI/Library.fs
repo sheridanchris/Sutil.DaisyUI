@@ -1,5 +1,6 @@
 ﻿namespace Sutil.DaisyUI
 
+open System
 open Sutil
 
 module Daisy =
@@ -157,6 +158,7 @@ module Daisy =
         let vertical = Attr.className "menu-vertical"
         let horizontal = Attr.className "menu-horizontal"
 
+    [<Obsolete("This component is deprecated and will be removed in the next major version. Use Join instead.")>]
     module ButtonGroup =
         let buttonGroup elements =
             Html.div [ Attr.className "btn-group"; yield! elements ]
@@ -612,6 +614,7 @@ module Daisy =
         let medium = Attr.className "btm-nav-md"
         let large = Attr.className "btm-nav-lg"
 
+    [<Obsolete("This component is deprecated and will be removed in the next major version. Use Join instead.")>]
     module InputGroup =
         let inputGroup elements =
             Html.label [ Attr.className "input-group"; yield! elements ]
