@@ -1,5 +1,6 @@
 ﻿namespace Sutil.DaisyUI
 
+open System
 open Sutil
 
 module Daisy =
@@ -9,6 +10,7 @@ module Daisy =
         let button elements =
             Html.button [ buttonAttr; yield! elements ]
 
+        let neutral = Attr.className "btn-neutral"
         let primary = Attr.className "btn-primary"
         let secondary = Attr.className "btn-secondary"
         let accent = Attr.className "btn-accent"
@@ -76,7 +78,8 @@ module Daisy =
         let badge elements =
             Html.span [ Attr.className "badge"; yield! elements ]
 
-        let outline = Attr.className "outline"
+        let neutral = Attr.className "badge-neutral"
+        let outline = Attr.className "badge-outline"
         let primary = Attr.className "badge-primary"
         let secondary = Attr.className "badge-secondary"
         let accent = Attr.className "badge-accent"
@@ -96,11 +99,13 @@ module Daisy =
             Html.table [ Attr.className "table"; yield! elements ]
 
         let zebra = Attr.className "table-zebra"
-        let active = Attr.className "active"
-        let hover = Attr.className "hover"
+        let pinRows = Attr.className "table-pin-rows"
+        let pinColumns = Attr.className "table-pin-cols"
 
-        let normal = Attr.className "table-normal"
-        let compact = Attr.className "table-compact"
+        let extraSmall = Attr.className "table-xs"
+        let small = Attr.className "table-sm"
+        let medium = Attr.className "table-md"
+        let large = Attr.className "table-lg"
 
     module Tooltip =
         let tooltip elements =
@@ -147,16 +152,27 @@ module Daisy =
         let title (value: string) =
             Html.li [ Attr.className "menu-title"; Html.span value ]
 
+        let dropdown elements =
+            Html.ul [ Attr.className "menu-dropdown"; yield! elements ]
+
+        let dropdownToggle elements =
+            Html.span [ Attr.className "menu-dropdown-toggle"; yield! elements ]
+
+        let dropdownShow = Attr.className "menu-dropdown-show"
+
         let disabled = Attr.className "disabled"
         let active = Attr.className "active"
-        let bordered = Attr.className "bordered"
-        let hoverBordered = Attr.className "hover-bordered"
+        let focus = Attr.className "focus"
 
-        let normal = Attr.className "menu-normal"
-        let compact = Attr.className "menu-compact"
+        let extraSmall = Attr.className "menu-xs"
+        let small = Attr.className "menu-sm"
+        let medium = Attr.className "menu-md"
+        let large = Attr.className "menu-lg"
+
         let vertical = Attr.className "menu-vertical"
         let horizontal = Attr.className "menu-horizontal"
 
+    [<Obsolete("This component is deprecated and will be removed in the next major version. Use Join instead.")>]
     module ButtonGroup =
         let buttonGroup elements =
             Html.div [ Attr.className "btn-group"; yield! elements ]
@@ -205,8 +221,10 @@ module Daisy =
         let error = Attr.className "chat-bubble-error"
 
     module Collapse =
+        let collapseAttr = Attr.className "collapse"
+
         let collapse elements =
-            Html.div [ Attr.className "collapse"; yield! elements ]
+            Html.div [ collapseAttr; yield! elements ]
 
         let title elements =
             Html.div [ Attr.className "collapse-title"; yield! elements ]
@@ -612,6 +630,7 @@ module Daisy =
         let medium = Attr.className "btm-nav-md"
         let large = Attr.className "btm-nav-lg"
 
+    [<Obsolete("This component is deprecated and will be removed in the next major version. Use Join instead.")>]
     module InputGroup =
         let inputGroup elements =
             Html.label [ Attr.className "input-group"; yield! elements ]
@@ -653,12 +672,14 @@ module Daisy =
         let overlay elements =
             Html.label [ Attr.className "drawer-overlay"; yield! elements ]
 
-        let mobile = Attr.className "drawer-mobile"
         let end' = Attr.className "drawer-end"
+        let open' = Attr.className "drawer-open"
 
     module Modal =
+        let modalAttr = Attr.className "modal"
+
         let modal elements =
-            Html.div [ Attr.className "modal"; yield! elements ]
+            Html.dialog [ modalAttr; yield! elements ]
 
         let box elements =
             Html.div [ Attr.className "modal-box"; yield! elements ]
@@ -669,13 +690,19 @@ module Daisy =
         let toggle elements =
             Html.input [ Attr.typeCheckbox; Attr.className "modal-toggle"; yield! elements ]
 
+        let backdrop elements =
+            Html.form [ Attr.method "dialog"; Attr.className "backdrop"; yield! elements ]
+
         let open' = Attr.className "modal-open"
+        let top = Attr.className "modal-top"
         let bottom = Attr.className "modal-bottom"
         let middle = Attr.className "modal-middle"
 
     module Dropdown =
+        let dropdownAttr = Attr.className "dropdown"
+
         let dropdown elements =
-            Html.div [ Attr.className "dropdown"; yield! elements ]
+            Html.div [ dropdownAttr; yield! elements ]
 
         let contentAttr = Attr.className "dropdown-content"
 
@@ -689,3 +716,22 @@ module Daisy =
         let right = Attr.className "dropdown-right"
         let hover = Attr.className "dropdown-hover"
         let open' = Attr.className "dropdown-open"
+
+    module Loading =
+        let loading elements =
+            Html.span [ Attr.className "loading"; yield! elements ]
+
+        let spinner = Attr.className "loading-spinner"
+        let dots = Attr.className "loading-dots"
+        let ring = Attr.className "loading-ring"
+        let ball = Attr.className "loading-ball"
+        let bars = Attr.className "loading-bars"
+        let infinity = Attr.className "loading-infinity"
+
+    module Join =
+        let join elements =
+            Html.div [ Attr.className "join"; yield! elements ]
+
+        let item = Attr.className "join-item"
+        let vertical = Attr.className "join-vertical"
+        let horizontal = Attr.className "join-horizontal"
