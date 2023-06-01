@@ -151,7 +151,7 @@ module Daisy =
 
         let title (value: string) =
             Html.li [ Attr.className "menu-title"; Html.span value ]
-        
+
         let dropdown elements =
             Html.ul [ Attr.className "menu-dropdown"; yield! elements ]
 
@@ -159,7 +159,7 @@ module Daisy =
             Html.span [ Attr.className "menu-dropdown-toggle"; yield! elements ]
 
         let dropdownShow = Attr.className "menu-dropdown-show"
-        
+
         let disabled = Attr.className "disabled"
         let active = Attr.className "active"
         let focus = Attr.className "focus"
@@ -168,7 +168,7 @@ module Daisy =
         let small = Attr.className "menu-sm"
         let medium = Attr.className "menu-md"
         let large = Attr.className "menu-lg"
-        
+
         let vertical = Attr.className "menu-vertical"
         let horizontal = Attr.className "menu-horizontal"
 
@@ -222,7 +222,7 @@ module Daisy =
 
     module Collapse =
         let collapseAttr = Attr.className "collapse"
-        
+
         let collapse elements =
             Html.div [ collapseAttr; yield! elements ]
 
@@ -700,7 +700,7 @@ module Daisy =
 
     module Dropdown =
         let dropdownAttr = Attr.className "dropdown"
-        
+
         let dropdown elements =
             Html.div [ dropdownAttr; yield! elements ]
 
