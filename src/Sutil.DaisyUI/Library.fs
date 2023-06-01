@@ -656,8 +656,8 @@ module Daisy =
         let overlay elements =
             Html.label [ Attr.className "drawer-overlay"; yield! elements ]
 
-        let mobile = Attr.className "drawer-mobile"
         let end' = Attr.className "drawer-end"
+        let open' = Attr.className "drawer-open"
 
     module Modal =
         let modal elements =
