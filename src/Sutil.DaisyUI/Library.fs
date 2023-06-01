@@ -10,6 +10,7 @@ module Daisy =
         let button elements =
             Html.button [ buttonAttr; yield! elements ]
 
+        let neutral = Attr.className "btn-neutral"
         let primary = Attr.className "btn-primary"
         let secondary = Attr.className "btn-secondary"
         let accent = Attr.className "btn-accent"
