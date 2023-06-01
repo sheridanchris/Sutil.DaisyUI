@@ -674,7 +674,15 @@ module Daisy =
         let toggle elements =
             Html.input [ Attr.typeCheckbox; Attr.className "modal-toggle"; yield! elements ]
 
+        let backdrop elements =
+            Html.form [
+                Attr.method "dialog"
+                Attr.className "backdrop"
+                yield! elements
+            ]
+        
         let open' = Attr.className "modal-open"
+        let top = Attr.className "modal-top"
         let bottom = Attr.className "modal-bottom"
         let middle = Attr.className "modal-middle"
 
