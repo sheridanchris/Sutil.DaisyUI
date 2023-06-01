@@ -78,7 +78,8 @@ module Daisy =
         let badge elements =
             Html.span [ Attr.className "badge"; yield! elements ]
 
-        let outline = Attr.className "outline"
+        let neutral = Attr.className "badge-neutral"
+        let outline = Attr.className "badge-outline"
         let primary = Attr.className "badge-primary"
         let secondary = Attr.className "badge-secondary"
         let accent = Attr.className "badge-accent"
