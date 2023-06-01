@@ -99,11 +99,13 @@ module Daisy =
             Html.table [ Attr.className "table"; yield! elements ]
 
         let zebra = Attr.className "table-zebra"
-        let active = Attr.className "active"
-        let hover = Attr.className "hover"
+        let pinRows = Attr.className "table-pin-rows"
+        let pinColumns = Attr.className "table-pin-cols"
 
-        let normal = Attr.className "table-normal"
-        let compact = Attr.className "table-compact"
+        let extraSmall = Attr.className "table-xs"
+        let small = Attr.className "table-sm"
+        let medium = Attr.className "table-md"
+        let large = Attr.className "table-lg"
 
     module Tooltip =
         let tooltip elements =
