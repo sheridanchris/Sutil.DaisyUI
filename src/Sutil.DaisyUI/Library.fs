@@ -700,3 +700,14 @@ module Daisy =
         let ball = Attr.className "loading-ball"
         let bars = Attr.className "loading-bars"
         let infinity = Attr.className "loading-infinity"
+
+    module Join =
+        let join elements =
+            Html.div [
+                Attr.className "join"
+                yield! elements
+            ]
+        
+        let item = Attr.className "join-item"
+        let vertical = Attr.className "join-vertical"
+        let horizontal = Attr.className "join-horizontal"
