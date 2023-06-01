@@ -660,9 +660,11 @@ module Daisy =
         let open' = Attr.className "drawer-open"
 
     module Modal =
+        let modalAttr = Attr.className "modal"
+        
         let modal elements =
-            Html.div [ Attr.className "modal"; yield! elements ]
-
+            Html.dialog [ modalAttr; yield! elements ]
+        
         let box elements =
             Html.div [ Attr.className "modal-box"; yield! elements ]
 
