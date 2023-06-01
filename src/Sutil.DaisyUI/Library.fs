@@ -149,14 +149,24 @@ module Daisy =
 
         let title (value: string) =
             Html.li [ Attr.className "menu-title"; Html.span value ]
+        
+        let dropdown elements =
+            Html.ul [ Attr.className "menu-dropdown"; yield! elements ]
 
+        let dropdownToggle elements =
+            Html.span [ Attr.className "menu-dropdown-toggle"; yield! elements ]
+
+        let dropdownShow = Attr.className "menu-dropdown-show"
+        
         let disabled = Attr.className "disabled"
         let active = Attr.className "active"
-        let bordered = Attr.className "bordered"
-        let hoverBordered = Attr.className "hover-bordered"
+        let focus = Attr.className "focus"
 
-        let normal = Attr.className "menu-normal"
-        let compact = Attr.className "menu-compact"
+        let extraSmall = Attr.className "menu-xs"
+        let small = Attr.className "menu-sm"
+        let medium = Attr.className "menu-md"
+        let large = Attr.className "menu-lg"
+        
         let vertical = Attr.className "menu-vertical"
         let horizontal = Attr.className "menu-horizontal"
 
@@ -663,10 +673,10 @@ module Daisy =
 
     module Modal =
         let modalAttr = Attr.className "modal"
-        
+
         let modal elements =
             Html.dialog [ modalAttr; yield! elements ]
-        
+
         let box elements =
             Html.div [ Attr.className "modal-box"; yield! elements ]
 
@@ -677,12 +687,8 @@ module Daisy =
             Html.input [ Attr.typeCheckbox; Attr.className "modal-toggle"; yield! elements ]
 
         let backdrop elements =
-            Html.form [
-                Attr.method "dialog"
-                Attr.className "backdrop"
-                yield! elements
-            ]
-        
+            Html.form [ Attr.method "dialog"; Attr.className "backdrop"; yield! elements ]
+
         let open' = Attr.className "modal-open"
         let top = Attr.className "modal-top"
         let bottom = Attr.className "modal-bottom"
@@ -708,7 +714,7 @@ module Daisy =
     module Loading =
         let loading elements =
             Html.span [ Attr.className "loading"; yield! elements ]
-        
+
         let spinner = Attr.className "loading-spinner"
         let dots = Attr.className "loading-dots"
         let ring = Attr.className "loading-ring"
@@ -718,11 +724,8 @@ module Daisy =
 
     module Join =
         let join elements =
-            Html.div [
-                Attr.className "join"
-                yield! elements
-            ]
-        
+            Html.div [ Attr.className "join"; yield! elements ]
+
         let item = Attr.className "join-item"
         let vertical = Attr.className "join-vertical"
         let horizontal = Attr.className "join-horizontal"
