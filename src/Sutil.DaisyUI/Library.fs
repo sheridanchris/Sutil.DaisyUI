@@ -689,3 +689,14 @@ module Daisy =
         let right = Attr.className "dropdown-right"
         let hover = Attr.className "dropdown-hover"
         let open' = Attr.className "dropdown-open"
+
+    module Loading =
+        let loading elements =
+            Html.span [ Attr.className "loading"; yield! elements ]
+        
+        let spinner = Attr.className "loading-spinner"
+        let dots = Attr.className "loading-dots"
+        let ring = Attr.className "loading-ring"
+        let ball = Attr.className "loading-ball"
+        let bars = Attr.className "loading-bars"
+        let infinity = Attr.className "loading-infinity"
