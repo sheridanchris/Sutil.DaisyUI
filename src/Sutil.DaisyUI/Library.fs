@@ -282,6 +282,9 @@ module Daisy =
         let vertical = Attr.className "divider-vertical"
         let horizontal = Attr.className "divider-horizontal"
 
+        let start = Attr.className "divider-start"
+        let end' = Attr.className "divider-end"
+
         let primary = Attr.className "divider-primary"
         let secondary = Attr.className "divider-secondary"
         let accent = Attr.className "divider-accent"
