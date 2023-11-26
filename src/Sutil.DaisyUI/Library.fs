@@ -735,3 +735,16 @@ module Daisy =
         let item = Attr.className "join-item"
         let vertical = Attr.className "join-vertical"
         let horizontal = Attr.className "join-horizontal"
+
+    module Timeline =
+        let timeline elements =
+            Html.ul [ Attr.className "timeline"; yield! elements ]
+
+        let compact = Attr.className "timeline-compact"
+        let snapIcon = Attr.className "timeline-snap-icon"
+        let vertical = Attr.className "timeline-vertical"
+        let horizontal = Attr.className "timeline-horizontal"
+        let start = Attr.className "timeline-start"
+        let middle = Attr.className "timeline-middle"
+        let end' = Attr.className "timeline-end"
+        let box = Attr.className "timeline-box"
