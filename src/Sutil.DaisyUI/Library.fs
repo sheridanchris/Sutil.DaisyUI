@@ -748,3 +748,7 @@ module Daisy =
         let middle = Attr.className "timeline-middle"
         let end' = Attr.className "timeline-end"
         let box = Attr.className "timeline-box"
+
+    module Skeleton =
+        let skeleton elements =
+            Html.div [ Attr.className "skeleton"; yield! elements ]
