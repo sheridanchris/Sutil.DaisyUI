@@ -282,6 +282,15 @@ module Daisy =
         let vertical = Attr.className "divider-vertical"
         let horizontal = Attr.className "divider-horizontal"
 
+        let primary = Attr.className "divider-primary"
+        let secondary = Attr.className "divider-secondary"
+        let accent = Attr.className "divider-accent"
+        let neutral = Attr.className "divider-neutral"
+        let success = Attr.className "divider-success"
+        let warning = Attr.className "divider-warning"
+        let info = Attr.className "divider-info"
+        let error = Attr.className "divider-error"
+
     module Stack =
         let stack elements =
             Html.div [ Attr.className "stack"; yield! elements ]
