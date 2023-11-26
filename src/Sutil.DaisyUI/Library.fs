@@ -338,13 +338,13 @@ module Daisy =
         let boxed = Attr.className "tabs-boxed"
         let active = Attr.className "tab-active"
         let disabled = Attr.className "tab-disabled"
-        let bordered = Attr.className "tab-bordered"
-        let lifted = Attr.className "tab-lifted"
+        let bordered = Attr.className "tabs-bordered"
+        let lifted = Attr.className "tabs-lifted"
 
-        let extraSmall = Attr.className "tab-xs"
-        let small = Attr.className "tab-sm"
-        let medium = Attr.className "tab-md"
-        let large = Attr.className "tab-lg"
+        let extraSmall = Attr.className "tabs-xs"
+        let small = Attr.className "tabs-sm"
+        let medium = Attr.className "tabs-md"
+        let large = Attr.className "tabs-lg"
 
     module Swap =
         let swap elements =
