@@ -282,6 +282,18 @@ module Daisy =
         let vertical = Attr.className "divider-vertical"
         let horizontal = Attr.className "divider-horizontal"
 
+        let start = Attr.className "divider-start"
+        let end' = Attr.className "divider-end"
+
+        let primary = Attr.className "divider-primary"
+        let secondary = Attr.className "divider-secondary"
+        let accent = Attr.className "divider-accent"
+        let neutral = Attr.className "divider-neutral"
+        let success = Attr.className "divider-success"
+        let warning = Attr.className "divider-warning"
+        let info = Attr.className "divider-info"
+        let error = Attr.className "divider-error"
+
     module Stack =
         let stack elements =
             Html.div [ Attr.className "stack"; yield! elements ]
@@ -335,16 +347,18 @@ module Daisy =
         let tab elements =
             Html.a [ Attr.className "tab"; yield! elements ]
 
+        let content = Attr.className "tab-content"
+
         let boxed = Attr.className "tabs-boxed"
         let active = Attr.className "tab-active"
         let disabled = Attr.className "tab-disabled"
-        let bordered = Attr.className "tab-bordered"
-        let lifted = Attr.className "tab-lifted"
+        let bordered = Attr.className "tabs-bordered"
+        let lifted = Attr.className "tabs-lifted"
 
-        let extraSmall = Attr.className "tab-xs"
-        let small = Attr.className "tab-sm"
-        let medium = Attr.className "tab-md"
-        let large = Attr.className "tab-lg"
+        let extraSmall = Attr.className "tabs-xs"
+        let small = Attr.className "tabs-sm"
+        let medium = Attr.className "tabs-md"
+        let large = Attr.className "tabs-lg"
 
     module Swap =
         let swap elements =
@@ -735,3 +749,36 @@ module Daisy =
         let item = Attr.className "join-item"
         let vertical = Attr.className "join-vertical"
         let horizontal = Attr.className "join-horizontal"
+
+    module Timeline =
+        let timeline elements =
+            Html.ul [ Attr.className "timeline"; yield! elements ]
+
+        let compact = Attr.className "timeline-compact"
+        let snapIcon = Attr.className "timeline-snap-icon"
+        let vertical = Attr.className "timeline-vertical"
+        let horizontal = Attr.className "timeline-horizontal"
+        let start = Attr.className "timeline-start"
+        let middle = Attr.className "timeline-middle"
+        let end' = Attr.className "timeline-end"
+        let box = Attr.className "timeline-box"
+
+    module Skeleton =
+        let skeleton elements =
+            Html.div [ Attr.className "skeleton"; yield! elements ]
+
+    module Diff =
+        let diff elements =
+            Html.div [ Attr.className "diff"; yield! elements ]
+
+        let item1 elements =
+            Html.div [ Attr.className "diff-item-1"; yield! elements ]
+
+        let item2 elements =
+            Html.div [ Attr.className "diff-item-2"; yield! elements ]
+
+        let resizer elements =
+            Html.div [ Attr.className "diff-resizer"; yield! elements ]
+
+    module ThemeController =
+        let themeController = Attr.className "theme-controller"
