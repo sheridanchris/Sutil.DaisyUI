@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Sutil" Version="2.0.10" />
+      <PackageReference Include="Sutil" Version="2.0.11" />
     </ItemGroup>
 
     <!-- Add source files to "fable" folder in Nuget package -->
