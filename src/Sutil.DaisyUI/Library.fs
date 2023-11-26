@@ -347,6 +347,8 @@ module Daisy =
         let tab elements =
             Html.a [ Attr.className "tab"; yield! elements ]
 
+        let content = Attr.className "tab-content"
+
         let boxed = Attr.className "tabs-boxed"
         let active = Attr.className "tab-active"
         let disabled = Attr.className "tab-disabled"
