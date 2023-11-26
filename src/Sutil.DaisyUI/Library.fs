@@ -765,3 +765,6 @@ module Daisy =
 
         let resizer elements =
             Html.div [ Attr.className "diff-resizer"; yield! elements ]
+
+    module ThemeController =
+        let themeController = Attr.className "theme-controller"
