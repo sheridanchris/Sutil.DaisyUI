@@ -752,3 +752,16 @@ module Daisy =
     module Skeleton =
         let skeleton elements =
             Html.div [ Attr.className "skeleton"; yield! elements ]
+
+    module Diff =
+        let diff elements =
+            Html.div [ Attr.className "diff"; yield! elements ]
+
+        let item1 elements =
+            Html.div [ Attr.className "diff-item-1"; yield! elements ]
+
+        let item2 elements =
+            Html.div [ Attr.className "diff-item-2"; yield! elements ]
+
+        let resizer elements =
+            Html.div [ Attr.className "diff-resizer"; yield! elements ]
